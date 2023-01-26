@@ -25,3 +25,5 @@ export const DEMO_THREADS = [
 	PrioritiesNames.default,
 	PrioritiesNames.high,
 ];
+
+5 000 000
