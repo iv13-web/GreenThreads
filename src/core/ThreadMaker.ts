@@ -7,16 +7,16 @@ import {
 
 export class ThreadMaker {
 	overallExecTimeForOneIteration: number;
-	idleTime: number;
+	staleTime: number;
 	execTimePerOneCoefficientPoint: number;
 	tasks: Set<Task> = new Set();
 	tasksQueue: Task[] = [];
 	hasExecutionStarted = false;
 
-	constructor({ overallExecTimeForOneIteration, idleTime }: Options = {}) {
+	constructor({ overallExecTimeForOneIteration, staleTime }: Options = {}) {
 		this.overallExecTimeForOneIteration =
 			overallExecTimeForOneIteration || DEFAULT_OVERALL_ITERATION_TIME;
-		this.idleTime = idleTime || DEFAULT_IDLE_TIME;
+		this.staleTime = staleTime || DEFAULT_IDLE_TIME;
 	}
 
 	*createWorker<T>(
@@ -106,7 +106,7 @@ export class ThreadMaker {
 			} else {
 				this.hasExecutionStarted = false;
 			}
-		}, this.idleTime);
+		}, this.staleTime);
 	}
 
 	execute() {

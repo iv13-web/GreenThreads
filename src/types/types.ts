@@ -13,7 +13,7 @@ export type Task = {
 
 export type Options = {
 	overallExecTimeForOneIteration?: number;
-	idleTime?: number;
+	staleTime?: number;
 };
 
 export enum PrioritiesNames {

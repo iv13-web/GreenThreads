@@ -1,4 +1,4 @@
-import './styles.css';
+import './styles/styles.css';
 import 'ui';
 import { DOM_SELECTORS } from 'ui';
 import { ThreadMaker } from 'core';

@@ -4,7 +4,7 @@ export const DEFAULT_OVERALL_ITERATION_TIME = 14;
 
 export const DEFAULT_IDLE_TIME = DEFAULT_OVERALL_ITERATION_TIME * 1.5;
 
-export const ARR_LENGTH = 50e5;
+export const ARR_LENGTH = 5e6;
 
 export const PRIORITY_COEFFICIENTS = {
 	[PrioritiesNames.low]: 0.5,
@@ -25,5 +25,3 @@ export const DEMO_THREADS = [
 	PrioritiesNames.default,
 	PrioritiesNames.high,
 ];
-
-5 000 000
