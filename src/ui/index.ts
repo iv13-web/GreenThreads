@@ -18,7 +18,7 @@ DEMO_THREADS.forEach((thread) => {
 	createIndicatorTemplate(thread);
 });
 
-export const UI = {
+export const DOM_SELECTORS = {
 	button: document.querySelector('button'),
 	underlay: document.querySelector('.plate-underlay'),
 	indicatorsWrapper: document.querySelector('.indicator-wrapper'),
@@ -33,8 +33,8 @@ export const LOGS_STYLE = {
 	low: 'background-color:#c5db93;color:#000;font-size:16px;font-weight:bold',
 };
 
-UI.button.addEventListener('click', () => {
-	const { underlay } = UI;
+DOM_SELECTORS.button.addEventListener('click', () => {
+	const { underlay } = DOM_SELECTORS;
 
 	if (underlay.classList.contains('clicked')) {
 		underlay.classList.remove('clicked');

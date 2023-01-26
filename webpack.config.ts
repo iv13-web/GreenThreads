@@ -9,7 +9,7 @@ export default (env: Env): webpack.Configuration => {
 	const paths: Paths = {
 		src: path.resolve(__dirname, 'src'),
 		entry: path.resolve(__dirname, 'src', 'index.ts'),
-		output: path.resolve(__dirname, 'build'),
+		output: path.resolve(__dirname, 'dist'),
 		html: path.resolve(__dirname, 'public', 'index.html'),
 		public: '/',
 	};

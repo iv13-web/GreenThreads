@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #e1eec3, #f05053); /* Chrome 10-25, Safari 5.1-6 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.plate {
+  width: 60%;
+  background: #f5f5fa;
+  border-radius: 8px;
+  box-shadow: -10px -10px 30px 0 #9d9d9d17,10px 10px 30px 0 #50505017;
+  box-sizing: border-box;
+  flex-direction: column;
+  display: flex;
+  font-family: "Cascadia Code",Consolas,Monaco,"Andale Mono","Ubuntu Mono",monospace;
+  font-size: 1rem;
+  justify-content: center;
+  line-height: 1.5rem;
+  padding: 24px;
+  position: relative;
+}
+
+.plate-underlay {
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+}
+
+.button {
+  border: none;
+  height: 40px;
+  cursor: pointer;
+  font: inherit;
+  background-color: #fa6d7c;
+  color: #f5f5fa;
+  border-radius: 8px;
+  z-index: 1;
+  margin-bottom: 24px;
+}
+
+.button:hover {
+  background-color: #dd5e69;
+}
+
+.indicator-wrapper {
+  height: 100%;
+}
+
+.priority {
+  margin-left: 4px;
+  color: #8e8a86;
+}
+
+.indicator {
+  width: 100%;
+  height: 32px;
+  background-color: antiquewhite;
+  border-radius: 8px;
+}
+
+.indicator:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.progress {
+  height: 100%;
+  width: 0;
+  background-color: red;
+  border-radius: 8px;
+}
+
+.critical {
+  background-color: #ffc7d2;
+}
+
+.high {
+  background-color: #ffcda6;
+}
+
+.low {
+  background-color: #c5db93;
+}
+
+.default {
+  background-color: #ffbbf5;
+}
+
+.clicked {
+  animation: pulse .75s ease;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.1);
+  }
+
+  100% {
+    box-shadow: 0 0 0 24px rgba(0, 0, 0, 0);
+  }
+}
+

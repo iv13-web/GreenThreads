@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack serve --env port=3006 --env mode=development"
+    "start": "webpack serve --env port=3006 --env mode=development",
+    "build": "webpack --mode=production",
+    "publish": "git subtree push --prefix dist origin gh-pages"
   },
   "keywords": [],
   "author": "",
