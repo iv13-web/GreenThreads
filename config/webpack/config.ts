@@ -1,4 +1,5 @@
 import webpack from 'webpack';
+import CssMinimizerPlugin from 'css-minimizer-webpack-plugin';
 import { devServer } from './modules/devServer';
 import { loaders } from './modules/loaders';
 import { plugins } from './modules/plugins';
@@ -19,6 +20,9 @@ export function config(options: Options): webpack.Configuration {
 		plugins: plugins(options),
 		module: {
 			rules: loaders(options),
+		},
+		optimization: {
+			minimizer: [new CssMinimizerPlugin()],
 		},
 		resolve: resolvers(options),
 		devtool: isDev && 'inline-source-map',
